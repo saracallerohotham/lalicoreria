@@ -4,7 +4,7 @@ import hero2 from "../assets/hero/hero2.png";
 import hero3 from "../assets/hero/hero3.png";
 import hero4 from "../assets/hero/hero4.png";
 
-import { useState } from "React";
+import { useState } from "react";
 
 const images = [hero1, hero2, hero3, hero4];
 

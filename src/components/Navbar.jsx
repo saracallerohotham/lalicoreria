@@ -1,4 +1,4 @@
-import { Navbar as FlowbiteNavbar, Dropdown } from "flowbite-react";
+import { Navbar as FlowbiteNavbar } from "flowbite-react";
 import { Link } from "react-router-dom";
 import LICORERIA from "../assets/logo/LICORERIA.png";
 
