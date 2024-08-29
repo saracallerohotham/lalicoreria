@@ -1,17 +1,41 @@
 import "./output.css";
-import Navbar from "./components/Navbar";
-import Topbar from "./components/Topbar";
-import Slider from "./components/Slider";
-import Destacados from "./components/Destacados";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import {
+  Navbar,
+  TopBar,
+  Slider,
+  Destacados,
+  ProductList,
+  TestGrid,
+} from "./components";
+import { HomePage, AboutPage, ServicesPage, ContactPage } from "./pages";
+import { products } from "./data/products";
 
 function App() {
   return (
-    <>
-      <Topbar />
+    <Router>
+      <TopBar />
       <Navbar />
-      <Slider />
-      <Destacados />
-    </>
+      <TestGrid />
+      {/* Contenedor para las rutas */}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <HomePage />
+              <Slider />
+              <Destacados products={products} />
+              <ProductList products={products} />
+            </>
+          }
+        />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Router>
   );
 }
 

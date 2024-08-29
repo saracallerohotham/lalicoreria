@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const images = [hero1, hero2, hero3, hero4];
 
-function Slider() {
+export function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -43,5 +43,3 @@ function Slider() {
     </div>
   );
 }
-
-export default Slider;
